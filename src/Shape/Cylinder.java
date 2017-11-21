@@ -28,6 +28,11 @@ public class Cylinder extends ThreeDShapes {
 		// TODO Auto-generated method stub
 		return Math.PI * Math.pow(_radius, 2) * _height;
 	}
+                @Override
+	public String toString() 
+	{
+		return "i am Cylinder, named " + this._name + " with the following measurements:\nRadius:" + this._radius + "\nHeight:" + this._height; 
+	}
 
 }
 
