@@ -174,40 +174,55 @@ public class Main extends Object implements Serializable {
 			return null;
 		}
 
-		System.out.print("width > ");
-		String strWidth = "";
+		System.out.print("Side 1 length > ");
+		String strSide1 = "";
 		try {
-			strWidth = br.readLine();
+			strSide1 = br.readLine();
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
 
-		if ("".equals(strWidth)) {
-			System.out.println("[ERROR] Enter the width correctly");
+		if ("".equals(strSide1)) {
+			System.out.println("[ERROR] Enter the length correctly");
 			return null;
 		}
 
-		System.out.print("height > ");
-		String strHeight = "";
+		System.out.print("side 2 length > ");
+		String strSide2 = "";
 		try {
-			strHeight = br.readLine();
+			strSide2 = br.readLine();
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
 
-		if ("".equals(strHeight)) {
-			System.out.println("[ERROR] Enter the height correctly");
+		if ("".equals(strSide2)) {
+			System.out.println("[ERROR] Enter the length correctly");
+			return null;
+		}
+                                    
+                                    System.out.print("side 3 length > ");
+		String strSide3 = "";
+		try {
+			strSide3 = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(strSide3)) {
+			System.out.println("[ERROR] Enter the length correctly");
 			return null;
 		}
 
 		try {
-			Double height = Double.valueOf(strHeight);
-			Double width = Double.valueOf(strWidth);
-			Triangle t = new Triangle(name, width, height);
+			Double side1 = Double.valueOf(strSide1);
+			Double side2 = Double.valueOf(strSide2);
+                                                     Double side3 = Double.valueOf(strSide3);
+                        
+			Triangle t = new Triangle(name, side1, side2, side3);
 
 			return t;
 		} catch (Exception e) {
-			System.out.println("[ERROR] width or height should be a double.");
+			System.out.println("[ERROR] All sides should be a double.");
 		}
 
 		return null;
