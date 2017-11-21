@@ -4,7 +4,7 @@ package shape;
     * @auther Ashley 
     */
 
-public class Sphere extends ThreeSections {
+public class Sphere extends ThreeDShapes {
  
 	private static final long serialVersionUID = 1049026575746486178L;
 	private final double _radius;
