@@ -17,7 +17,7 @@ import java.util.LinkedList;
 public class Main extends Object implements Serializable {
 
 	
-	
+	private static final long serialVersionUID = -92491775749786151L;
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	public static LinkedList<Shape> shapes = new LinkedList<Shape>();
 
@@ -56,9 +56,9 @@ public class Main extends Object implements Serializable {
 				System.out.println("Perimiter:" + twodshape.getPerimiter());
 
 			} else {
-				ThreeSections threeshape = (ThreeSections) shape;
-				System.out.println("Surface: " + threeshape.getSurface());
-				System.out.println("Voume: " + threeshape.getvolume());
+				ThreeDShapes threedshape = (ThreeDShapes) shape;
+				System.out.println("Surface: " + threedshape.getSurface());
+				System.out.println("Voume: " + threedshape.getvolume());
 			}
 			System.out.println("");
 
