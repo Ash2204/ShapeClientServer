@@ -49,3 +49,48 @@ public class Main extends Object implements Serializable {
 				System.out.println("Voume: " + threeshape.getvolume());
 			}
 			System.out.println("");
+                        
+                        }
+	}
+
+	public static Circle createCircle() {
+		System.out.println("Create a circle");
+		System.out.print("Name > ");
+		String name = "";
+		try {
+			name = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(name)) {
+			System.out.println("[ERROR] Enter the name correctly");
+			return null;
+		}
+
+		System.out.print("Radius > ");
+		String strRadius = "";
+		try {
+			strRadius = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(strRadius)) {
+			System.out.println("[ERROR] Enter the radius correctly");
+			return null;
+		}
+
+		try {
+			Double radius = Double.valueOf(strRadius);
+			Circle c = new Circle(name, radius);
+
+			return c;
+		} catch (Exception e) {
+			System.out.println("[ERROR] Radius should be a double.");
+		}
+
+		return null;
+	}
+        
+        
