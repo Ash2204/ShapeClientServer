@@ -19,7 +19,7 @@ public class Rectangle extends TwoDShapes {
    
     public void displayDescription(){
         super.displayDescrpition();
-        System.out.println("\tI'm also a rectangle");
+        System.out.println("\tI'm also a rectangle"); 
     }
    
    /* public double getArea(){
