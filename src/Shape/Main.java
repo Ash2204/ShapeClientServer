@@ -56,9 +56,9 @@ public class Main extends Object implements Serializable {
 				System.out.println("Perimiter:" + twodshape.getPerimiter());
 
 			} else {
-				ThreeDShapes threedshape = (ThreeDShapes) shape;
-				System.out.println("Surface: " + threedshape.getSurface());
-				System.out.println("Voume: " + threedshape.getvolume());
+				ThreeDShapes threeshape = (ThreeDShapes) shape;
+				System.out.println("Surface: " + threeshape.getSurface());
+				System.out.println("Voume: " + threeshape.getvolume());
 			}
 			System.out.println("");
 
