@@ -5,7 +5,7 @@ public class Triangle extends TwoDShapes {
     /**
      * @auther Ashley
      */
-
+    private static final long serialVersionUID = 1651954022760024964L;
     private final double _height;
     private final double _width;
 
