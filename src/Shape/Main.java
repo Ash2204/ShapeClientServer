@@ -1,8 +1,8 @@
 package shape;
 
 /**
- *@author Ashley 
- */
+* @Author Ashley
+*/
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,7 +16,6 @@ import java.util.LinkedList;
 
 public class Main extends Object implements Serializable {
 
-	
 	private static final long serialVersionUID = -92491775749786151L;
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	public static LinkedList<Shape> shapes = new LinkedList<Shape>();
@@ -56,9 +55,9 @@ public class Main extends Object implements Serializable {
 				System.out.println("Perimiter:" + twodshape.getPerimiter());
 
 			} else {
-				ThreeDShapes threeshape = (ThreeDShapes) shape;
-				System.out.println("Surface: " + threeshape.getSurface());
-				System.out.println("Voume: " + threeshape.getvolume());
+				ThreeDShapes threedshape = (ThreeDShapes) shape;
+				System.out.println("Surface: " + threedshape.getSurface());
+				System.out.println("Voume: " + threedshape.getvolume());
 			}
 			System.out.println("");
 
@@ -413,7 +412,7 @@ public class Main extends Object implements Serializable {
 					}
 
 					if (!(shapeType.equals("R") || shapeType.equals("C") || shapeType.equals("T")
-							|| shapeType.equals("A"))) {
+							|| shapeType.equals("A") || shapeType.equals("S") || shapeType.equals("Y"))) {
 						System.out.println("\n[ERROR] Wrong command !");
 						continue;
 					}
