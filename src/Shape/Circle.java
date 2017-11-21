@@ -41,7 +41,7 @@ public class Circle extends TwoDShapes{
 	@Override
 	public String toString() 
 	{
-		return "i am Circle, named " + this._name + "With a radius of " + this._radius; 
+		return "I am Circle, named " + this._name + " with the following measurements:\nRadius:" + "" + this._radius; 
 	}
 }
 
