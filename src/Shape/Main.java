@@ -93,4 +93,110 @@ public class Main extends Object implements Serializable {
 		return null;
 	}
         
-        
+        public static Rectangle createRectangle() {
+		System.out.println("Create a Rectangle");
+		System.out.print("Name > ");
+		String name = "";
+		try {
+			name = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(name)) {
+			System.out.println("[ERROR] Enter the name correctly");
+			return null;
+		}
+
+		System.out.print("width > ");
+		String strWidth = "";
+		try {
+			strWidth = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(strWidth)) {
+			System.out.println("[ERROR] Enter the width correctly");
+			return null;
+		}
+
+		System.out.print("height > ");
+		String strHeight = "";
+		try {
+			strHeight = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(strHeight)) {
+			System.out.println("[ERROR] Enter the height correctly");
+			return null;
+		}
+
+		try {
+			Double height = Double.valueOf(strHeight);
+			Double width = Double.valueOf(strWidth);
+			Rectangle r = new Rectangle(name, width, height);
+
+			return r;
+		} catch (Exception e) {
+			System.out.println("[ERROR] width or height should be a double.");
+		}
+
+		return null;
+	}
+
+        public static Triangle createTriangle() {
+		System.out.println("Create a Triangle");
+		System.out.print("Name > ");
+		String name = "";
+		try {
+			name = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(name)) {
+			System.out.println("[ERROR] Enter the name correctly");
+			return null;
+		}
+
+		System.out.print("width > ");
+		String strWidth = "";
+		try {
+			strWidth = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(strWidth)) {
+			System.out.println("[ERROR] Enter the width correctly");
+			return null;
+		}
+
+		System.out.print("height > ");
+		String strHeight = "";
+		try {
+			strHeight = br.readLine();
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
+
+		if ("".equals(strHeight)) {
+			System.out.println("[ERROR] Enter the height correctly");
+			return null;
+		}
+
+		try {
+			Double height = Double.valueOf(strHeight);
+			Double width = Double.valueOf(strWidth);
+			Triangle t = new Triangle(name, width, height);
+
+			return t;
+		} catch (Exception e) {
+			System.out.println("[ERROR] width or height should be a double.");
+		}
+
+		return null;
+	}
