@@ -1,12 +1,24 @@
 package shape;
 
 /**
- *@auther Ashley 
+ *@author Ashley 
  */
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.net.Socket;
+import java.net.UnknownHostException;
+import java.util.LinkedList;
 
 public class Main extends Object implements Serializable {
 
+	
+	
+	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	public static LinkedList<Shape> shapes = new LinkedList<Shape>();
 
 	public static void printMenu() {
@@ -49,8 +61,8 @@ public class Main extends Object implements Serializable {
 				System.out.println("Voume: " + threeshape.getvolume());
 			}
 			System.out.println("");
-                        
-                        }
+
+		}
 	}
 
 	public static Circle createCircle() {
@@ -92,8 +104,8 @@ public class Main extends Object implements Serializable {
 
 		return null;
 	}
-        
-        public static Rectangle createRectangle() {
+
+	public static Rectangle createRectangle() {
 		System.out.println("Create a Rectangle");
 		System.out.print("Name > ");
 		String name = "";
@@ -147,7 +159,7 @@ public class Main extends Object implements Serializable {
 		return null;
 	}
 
-        public static Triangle createTriangle() {
+	public static Triangle createTriangle() {
 		System.out.println("Create a Triangle");
 		System.out.print("Name > ");
 		String name = "";
@@ -200,8 +212,8 @@ public class Main extends Object implements Serializable {
 
 		return null;
 	}
-        
-        public static Sphere createSphere() {
+
+	public static Sphere createSphere() {
 		System.out.println("Create a Sphere");
 		System.out.print("Name > ");
 		String name = "";
@@ -294,8 +306,8 @@ public class Main extends Object implements Serializable {
 
 		return null;
 	}
-        
-                  public static void main(String args[]) {
+
+	public static void main(String args[]) {
 		String serverName = "localhost";
 		int port = Integer.parseInt("6066");
 		ObjectOutputStream out = null;
