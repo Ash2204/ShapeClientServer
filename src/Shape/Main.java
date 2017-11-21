@@ -33,21 +33,22 @@ public class Main extends Object implements Serializable {
 		System.out.println("1. Create a circle");
 		System.out.println("2. Create a rectangle");
 		System.out.println("3. Create a triangle");
-		System.out.println("4. Go to main menu");
+		System.out.println("4. Go to main menu (to send and recieve shapes)");
 		System.out.print("> ");
 	}
 
 	public static void print3dMenu() {
 		System.out.println("1. Create a Sphere");
 		System.out.println("2. Create a Cylinder ");
-		System.out.println("3. Go to main menu");
+		System.out.println("3. Go to main menu (to send and recieve shapes)");
 		System.out.print("> ");
 	}
 
 	public static void printResult(LinkedList<Shape> result) {
 
 		for (final Shape shape : result) {
-			shape.displayDescrpition();
+			//shape.displayDescrpition();
+                                                    System.out.println(shape.toString());
 			
 			if (shape instanceof TwoDShapes) {
 				TwoDShapes twodshape = (TwoDShapes) shape;
@@ -66,7 +67,7 @@ public class Main extends Object implements Serializable {
 
 	public static Circle createCircle() {
 		System.out.println("Create a circle");
-		System.out.print("Name > ");
+		System.out.print("Name your shape > ");
 		String name = "";
 		try {
 			name = br.readLine();
@@ -106,7 +107,7 @@ public class Main extends Object implements Serializable {
 
 	public static Rectangle createRectangle() {
 		System.out.println("Create a Rectangle");
-		System.out.print("Name > ");
+		System.out.print("Name your shape > ");
 		String name = "";
 		try {
 			name = br.readLine();
@@ -160,7 +161,7 @@ public class Main extends Object implements Serializable {
 
 	public static Triangle createTriangle() {
 		System.out.println("Create a Triangle");
-		System.out.print("Name > ");
+		System.out.print("Name your shape > ");
 		String name = "";
 		try {
 			name = br.readLine();
@@ -214,7 +215,7 @@ public class Main extends Object implements Serializable {
 
 	public static Sphere createSphere() {
 		System.out.println("Create a Sphere");
-		System.out.print("Name > ");
+		System.out.print("Name your shape > ");
 		String name = "";
 		try {
 			name = br.readLine();
@@ -254,7 +255,7 @@ public class Main extends Object implements Serializable {
 
 	public static Cylinder createCylinder() {
 		System.out.println("Create a Cylinder");
-		System.out.print("Name > ");
+		System.out.print("Name your shape > ");
 		String name = "";
 		try {
 			name = br.readLine();
@@ -402,7 +403,7 @@ public class Main extends Object implements Serializable {
 						System.out.println(e);
 					}
 				} else if ("4".equals(line)) { // receive
-					System.out.println("Select shape type (R, C, T, A, Y, S) !");
+					System.out.println("Please select a shape type (R, C, T, A, Y, S) !");
 					System.out.print("> ");
 					String shapeType = "";
 					try {
