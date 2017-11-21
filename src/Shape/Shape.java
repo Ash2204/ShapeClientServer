@@ -1,4 +1,3 @@
-
 package shape;
 
 import java.io.Serializable;
@@ -9,8 +8,7 @@ import java.io.Serializable;
  */
 public abstract class Shape extends Object implements Serializable {
 
-	
-	
+	private static final long serialVersionUID = 4844740341402349850L;
 	final int _numberOfSides;
 	final String _name;
 
