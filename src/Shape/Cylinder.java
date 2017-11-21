@@ -1,9 +1,9 @@
 package shape;
 
-public class Cylinder extends ThreeSections {
-	/**
-	 * 
-	 */
+
+
+public class Cylinder extends ThreeDShapes {
+	
 	private static final long serialVersionUID = 5915967621854741473L;
 	private final double _radius;
 	private final double _height;
