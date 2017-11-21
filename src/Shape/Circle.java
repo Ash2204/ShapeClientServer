@@ -16,7 +16,6 @@ public class Circle extends TwoDShapes{
     
     public void displayDescription(){
         super.displayDescrpition();
-        System.out.println("I'm also a circle");
     }
     
   /*  public double getArea() {
@@ -42,7 +41,7 @@ public class Circle extends TwoDShapes{
 	@Override
 	public String toString() 
 	{
-		return "C," + this._name + "," + this._numberOfSides + "," + this._radius; 
+		return "i am Circle, named " + this._name + "With a radius of " + this._radius; 
 	}
 }
 
