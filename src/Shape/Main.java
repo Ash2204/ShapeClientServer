@@ -33,4 +33,19 @@ public class Main extends Object implements Serializable {
 		System.out.print("> ");
 	}
 
-	
+	public static void printResult(LinkedList<Shape> result) {
+
+		for (final Shape shape : result) {
+			shape.displayDescrpition();
+			
+			if (shape instanceof TwoDShapes) {
+				TwoDShapes twodshape = (TwoDShapes) shape;
+				System.out.println("Area: " + twodshape.getArea());
+				System.out.println("Perimiter:" + twodshape.getPerimiter());
+
+			} else {
+				ThreeSections threeshape = (ThreeSections) shape;
+				System.out.println("Surface: " + threeshape.getSurface());
+				System.out.println("Voume: " + threeshape.getvolume());
+			}
+			System.out.println("");
