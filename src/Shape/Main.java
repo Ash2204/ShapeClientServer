@@ -20,6 +20,7 @@ public class Main extends Object implements Serializable {
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	public static LinkedList<Shape> shapes = new LinkedList<Shape>();
 
+        // prints first menu
 	public static void printMenu() {
 		System.out.println("1. Create 2D");
 		System.out.println("2. Create 3D");
@@ -28,7 +29,7 @@ public class Main extends Object implements Serializable {
 		System.out.println("5. Exit");
 		System.out.print("> ");
 	}
-
+        // prints second menu
 	public static void print2dMenu() {
 		System.out.println("1. Create a circle");
 		System.out.println("2. Create a rectangle");
@@ -36,14 +37,14 @@ public class Main extends Object implements Serializable {
 		System.out.println("4. Go to main menu (to send and recieve shapes)");
 		System.out.print("> ");
 	}
-
+         // print third menu  
 	public static void print3dMenu() {
 		System.out.println("1. Create a Sphere");
 		System.out.println("2. Create a Cylinder ");
 		System.out.println("3. Go to main menu (to send and recieve shapes)");
 		System.out.print("> ");
 	}
-
+        // Displays the result in the Linklist 
 	public static void printResult(LinkedList<Shape> result) {
 
 		for (final Shape shape : result) {
@@ -64,7 +65,7 @@ public class Main extends Object implements Serializable {
 
 		}
 	}
-
+         // creates Circle and asks for inputs checks for errors
 	public static Circle createCircle() {
 		System.out.println("Create a circle");
 		System.out.print("Name your shape > ");
@@ -104,7 +105,7 @@ public class Main extends Object implements Serializable {
 
 		return null;
 	}
-
+         // creates Rectangle and asks for input checks for errors
 	public static Rectangle createRectangle() {
 		System.out.println("Create a Rectangle");
 		System.out.print("Name your shape > ");
@@ -158,7 +159,7 @@ public class Main extends Object implements Serializable {
 
 		return null;
 	}
-
+         // creates Circle and asks for inputs checks for errors
 	public static Triangle createTriangle() {
 		System.out.println("Create a Triangle");
 		System.out.print("Name your shape > ");
@@ -227,7 +228,7 @@ public class Main extends Object implements Serializable {
 
 		return null;
 	}
-
+        // creates Sphere and asks for inputs checks for errors
 	public static Sphere createSphere() {
 		System.out.println("Create a Sphere");
 		System.out.print("Name your shape > ");
@@ -268,6 +269,7 @@ public class Main extends Object implements Serializable {
 		return null;
 	}
 
+        // creates Cylinder and asks for inputs checks for errors
 	public static Cylinder createCylinder() {
 		System.out.println("Create a Cylinder");
 		System.out.print("Name your shape > ");
@@ -329,6 +331,7 @@ public class Main extends Object implements Serializable {
 		ObjectInputStream in = null;
 		Socket client = null;
 		try {
+                    //creates a new socket with name localhost and a port number 6066
 			client = new Socket(serverName, port);
 		} catch (UnknownHostException e2) {
 			// TODO Auto-generated catch block
@@ -339,12 +342,14 @@ public class Main extends Object implements Serializable {
 		}
 
 		try {
+                          //creates a new outputstream
 			out = new ObjectOutputStream(client.getOutputStream());
 		} catch (IOException e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
 		try {
+                           //creates a new inputstream
 			in = new ObjectInputStream(client.getInputStream());
 		} catch (IOException e2) {
 			// TODO Auto-generated catch block
