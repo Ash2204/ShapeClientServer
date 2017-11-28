@@ -15,8 +15,7 @@ import java.net.UnknownHostException;
 import java.util.LinkedList;
 
 public class Main extends Object implements Serializable {
-// serial version UID runtime associates with each of the serializable classes and verifies the sender and reciver are compatable
-	private static final long serialVersionUID = -92491775749786151L;
+    
 	public static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	public static LinkedList<Shape> shapes = new LinkedList<Shape>();
 
