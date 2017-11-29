@@ -22,16 +22,17 @@ import shape.Shape;
 import shape.Sphere;
 import shape.Triangle;
 
+// Class subclass(ClientThread) extends superclass(Thread)
 public class ClientThread extends Thread {
-
+// Private final varibles
 	private Socket socket;
 	private int id;
-
+// declares sockets and client id
 	public ClientThread(Socket socket, int clientId) {
 		this.socket = socket;
 		this.id = clientId;
 	}
-
+// creates a new socket for output and input screams and overrides 
 	@Override
 	public void run() {
 		try {
@@ -51,22 +52,24 @@ public class ClientThread extends Thread {
 					System.out.println("current client closed.");
 					break;
 				}
-
+                                                                      // save is true and will always save the file. 
 				if (cmd.cmd_type.equals("save")) {
 
 					result = (LinkedList<Shape>) cmd.data;
-
+                                                                                        //prints how many results are to be sent
 					System.out.println("Save request, " + result.size());
-
+                                                                                        // prints using printwriter to .txt file
 					PrintWriter writer;
 					writer = new PrintWriter("result" + this.id + ".txt", "UTF-8");
 
 					for (final Shape shape : result) {
-						writer.println(shape.toString());
+						writer.println(shape);
 					}
-
+                                                                                        // closes writer 
 					writer.close();
-
+                                        
+                                                                       //Creates the a new linklist for the shape requested, the users input examples:
+                                                                       // R = Rectagle, C = Circle, T = Triangle, Y = Cylinder, A = All shapes to print, S = Sphere
 				} else if (cmd.cmd_type.equals("R")) {
 
 					LinkedList<Shape> getR = new LinkedList<Shape>();
@@ -77,7 +80,7 @@ public class ClientThread extends Thread {
 						}
 
 					}
-
+                                                                                        // pushes out object flushes the server and resets again 
 					out.writeObject(getR);
 					out.flush();
 					out.reset();
@@ -148,12 +151,13 @@ public class ClientThread extends Thread {
 				}
 				
 				try {
+                                                                                        // waits for 10 nano seconds before throwing
 					Thread.sleep(10);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
-
+                                            // closes sockets, output steams and object in streams 
 			out.close();
 			objectIn.close();
 			socket.close();
